@@ -32,6 +32,7 @@ class SweetReport extends Component
                 ->whereRaw('LOWER(comments) NOT LIKE ?', ["%don't call me%"])
                 ->get();
         } elseif ($this->reportType == 'Comments about referrals') {
+            $this->comments = Comment::whereRaw('LOWER(comments) LIKE ?', ['% refer%'])->get();
         } elseif ($this->reportType == 'Comments about signatures') {
         } else {
         }

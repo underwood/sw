@@ -21,6 +21,9 @@ npm run build
 php artisan key:generate
 php artisan migrate
 
+Run the command to update the shipdate_expected.
+php artisan app:update-ship-date
+
 Feel free to email if you have any issues running this locally.
 
 ## About Laravel

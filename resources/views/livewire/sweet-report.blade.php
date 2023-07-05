@@ -69,14 +69,14 @@
   <div class="xl:pl-72">
     <main>
       <header>
-<div class="w-1/4 p-4">
+<div class="w-1/2 p-4">
   <label for="location" class="block text-sm font-medium leading-6 text-gray-100">Comment Report Type</label>
   <select wire:model="reportType" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
     <option>Comments about candy</option>
     <option>Comments about calling customer</option>
     <option>Comments about referrals</option>
     <option>Comments about signature requirements</option>
-    <option>All Comments</option>
+    <option>All Other Comments</option>
   </select>
 </div>
 
@@ -111,7 +111,7 @@
               </td>
               <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
                 <div class="flex gap-x-3">
-                  <div class="font-mono text-sm leading-6 text-gray-400">{{ $comment->shipdate_expected }}</div>
+                  <div class="font-mono text-sm leading-6 text-gray-400">{{ $comment->displayShipDate() }}</div>
                 </div>
               </td>
 

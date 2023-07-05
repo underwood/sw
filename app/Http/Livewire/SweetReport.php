@@ -38,6 +38,12 @@ class SweetReport extends Component
                 ->OrWhereRaw('LOWER(comments) LIKE ?', ['% signature%'])
                 ->get();
         } else {
+            $this->comments = Comment::whereRaw('LOWER(comments) NOT LIKE ?', ['%candy%'])
+                ->whereRaw('LOWER(comments) NOT LIKE ?', ['%call me%'])
+                ->whereRaw('LOWER(comments) NOT LIKE ?', ['% refer%'])
+                ->whereRaw('LOWER(comments) NOT LIKE ?', ['% sign%'])
+                ->whereRaw('LOWER(comments) NOT LIKE ?', ['% signature%'])
+                ->get();
         }
 
         return view('livewire.sweet-report');

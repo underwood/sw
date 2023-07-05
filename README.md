@@ -11,6 +11,7 @@ Sweetwater Code Test
 Use the .env.example in this repo, rename to .env
 
 Enter your local database details in the .env
+
 Use the example database you provided in the zip file.
 
 You will need to run the following commands after cloning this locally.
@@ -20,7 +21,7 @@ npm run build
 php artisan key:generate
 php artisan migrate
 
-Feel free to email if you have any issues running this l
+Feel free to email if you have any issues running this locally.
 
 ## About Laravel
 

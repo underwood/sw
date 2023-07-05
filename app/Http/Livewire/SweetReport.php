@@ -25,9 +25,15 @@ class SweetReport extends Component
 
         if ($this->reportType == 'Comments about candy') {
             $this->comments = Comment::whereRaw('LOWER(comments) LIKE ?', ['%candy%'])->get();
-        } elseif ($this->reportType == 'Comments about calling me') {
+        } elseif ($this->reportType == 'Comments about calling customer') {
+            $this->comments =
+                Comment::whereRaw('LOWER(comments) LIKE ?', ['%call me%'])
+                ->whereRaw('LOWER(comments) NOT LIKE ?', ['%do not call me%'])
+                ->whereRaw('LOWER(comments) NOT LIKE ?', ["%don't call me%"])
+                ->get();
         } elseif ($this->reportType == 'Comments about referrals') {
         } elseif ($this->reportType == 'Comments about signatures') {
+        } else {
         }
 
         return view('livewire.sweet-report');

@@ -75,6 +75,7 @@
     <option>Comments about candy</option>
     <option>Comments about calling customer</option>
     <option>Comments about referrals</option>
+    <option>Comments about signature requirements</option>
     <option>All Comments</option>
   </select>
 </div>
